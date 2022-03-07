@@ -52,7 +52,9 @@ export default function Home({ propertiesForSale, propertiesForRent }) {
         buttonText='Explore Buying'
         linkName='/search?purpose=for-sale'
       />
-      {propertiesForSale.map((property) => <Property property={property} key={property.id} />)}
+      <Flex flexWrap='wrap'>
+        {propertiesForSale.map((property) => <Property property={property} key={property.id} />)}
+      </Flex>
     </Box>
   )
 }
